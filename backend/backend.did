@@ -1,0 +1,14 @@
+type Student = 
+ record {
+   grade: nat;
+   id: nat;
+   name: text;
+   photoUrl: text;
+   quote: text;
+ };
+service : {
+  addStudent: (text, nat, text, text) -> (nat);
+  getAllStudents: () -> (vec Student) query;
+  getStudent: (nat) -> (opt Student) query;
+  updateStudent: (nat, text, nat, text, text) -> (bool);
+}
